@@ -60,7 +60,7 @@ function CreateEsp(Player)
                 Weapon.Visible = IsVisible
                 Weapon.Color = Config.NamesColor
                 for i,Weapons in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-                    Weapon.Text = Player.Character[v]
+                    Weapon.Text = Player.Character[v.Name]
                end
                Weapon.Center = true
                Weapon.Outline = Config.NamesOutline
