@@ -12,7 +12,7 @@ local Config = {
     NamesOutlineColor = Color3.fromRGB(0,0,0),
     NamesFont         = 2, -- 0,1,2,3
     NamesSize         = 13,
-    Weapon            = false
+    Weapons            = false
 }
 
 function CreateEsp(Player)
@@ -56,7 +56,7 @@ function CreateEsp(Player)
             else
                 Name.Visible = false
             end
-            if Config.Weapon then
+            if Config.Weapons then
                Weapon.Visible = IsVisible
                Weapon.Color = Config.NamesColor
                Weapon.Center = true
