@@ -58,13 +58,13 @@ function CreateEsp(Player)
             end
             if Config.Weapons then
                Weapon.Visible = IsVisible
-               Weapon.Color = Config.NamesColor
+               Weapon.Color = Config.WeaponsColor
                Weapon.Center = true
-               Weapon.Outline = Config.NamesOutline
+               Weapon.Outline = Config.WeaponsOutline
                Weapon.OutlineColor = Config.NamesOutlineColor
                Weapon.Position = Vector2.new(Target2dPosition.X, Target2dPosition.Y - height * 0.5 + -15)
-               Weapon.Font = Config.NamesFont
-               Weapon.Size = Config.NamesSize
+               Weapon.Font = Config.WeaponsFont
+               Weapon.Size = Config.WeaponsSize
                 if Player.Character:FindFirstChild("Golden Asumai") then
                     Weapon.Text = "Golden Asumai"
                     elseif Player.Character:FindFirstChild("Onyx Asumai") then
