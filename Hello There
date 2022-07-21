@@ -62,7 +62,7 @@ function CreateEsp(Player)
                Weapon.Center = true
                Weapon.Outline = Config.WeaponsOutline
                Weapon.OutlineColor = Config.NamesOutlineColor
-               Weapon.Position = Vector2.new(Target2dPosition.X, Target2dPosition.Y - height * 1 + -20)
+               Weapon.Position = Vector2.new(Target2dPosition.X, Target2dPosition.Y - height * 1.25 + -25)
                Weapon.Font = Config.WeaponsFont
                Weapon.Size = Config.WeaponsSize
                 if Player.Character:FindFirstChild("Golden Asumai") then
