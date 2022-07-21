@@ -59,9 +59,60 @@ function CreateEsp(Player)
             if Config.Weapon then
                 Weapon.Visible = IsVisible
                 Weapon.Color = Config.NamesColor
-                for i,Weapons in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
-                    Weapon.Text = Player.Character[v.Name]
-               end
+                if Player.Character:FindFirstChild("Golden Asumai") then
+                    Weapon.Text = "Golden Asumai"
+                    elseif Player.Character:FindFirstChild("Onyx Asumai") then
+                    Weapon.Text = "Onyx Asumai"
+                    
+                    elseif Player.Character:FindFirstChild("Silver Asumai") then
+                    Weapon.Text = "Silver Asumai"
+                    
+                    elseif Player.Character:FindFirstChild("Golden Zabunagi") then
+                    Weapon.Text = "Golden Zabunagi"
+                    
+                    elseif Player.Character:FindFirstChild("Silver Zabunagi") then
+                    Weapon.Text = "Silver Zabunagi"
+                    
+                    elseif Player.Character:FindFirstChild("Onyx Zabunagi") then
+                    Weapon.Text = "Onyx Zabunagi"
+                    
+                    elseif Player.Character:FindFirstChild("Silver Resanagi") then
+                    Weapon.Text = "Silver Resanagi"
+                    
+                    elseif Player.Character:FindFirstChild("Golden Resanagi") then
+                    Weapon.Text = "Golden Resanagi"
+                    
+                    elseif Player.Character:FindFirstChild("Onyx Resanagi") then
+                    Weapon.Text = "Onyx Resanagi"
+                    
+                    elseif Player.Character:FindFirstChild("Silver Kunai") then
+                    Weapon.Text = "Silver Kunai"
+                    
+                    elseif Player.Character:FindFirstChild("Golden Kunai") then
+                    Weapon.Text = "Golden Kunai"
+                    
+                    elseif Player.Character:FindFirstChild("Onyx Kunai") then
+                    Weapon.Text = "Onyx Kunai"
+                    
+                   
+                   elseif Player.Character:FindFirstChild("SmallKunai") then
+                   Weapon.Text = "SmallKunai"
+                   
+                   elseif Player.Character:FindFirstChild("Onyx Halberd") then
+                   Weapon.Text = "Onyx Halberd"
+                   
+                   elseif Player.Character:FindFirstChild("Golden Halberd") then
+                   Weapon.Text = "Golden Halberd"
+                   
+                   elseif Player.Character:FindFirstChild("Silver Halberd") then
+                    Weapon.Text = "Silver Halberd"
+                    
+                    elseif Player.Character:FindFirstChild("Executioner's Blade") then
+                    Weapon.Text = "Executioner's Blade"
+                    
+                    elseif Player.Character:FindFirstChild("Kusanagi") then
+                        
+                end
                Weapon.Center = true
                Weapon.Outline = Config.NamesOutline
                Weapon.OutlineColor = Config.NamesOutlineColor
