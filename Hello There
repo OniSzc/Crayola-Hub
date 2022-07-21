@@ -11,11 +11,12 @@ local Config = {
     NamesColor        = Color3.fromRGB(255,255,255),
     NamesOutlineColor = Color3.fromRGB(0,0,0),
     NamesFont         = 2, -- 0,1,2,3
-    NamesSize         = 13
+    NamesSize         = 13,
+    Weapon            = false
 }
 
 function CreateEsp(Player)
-    local Box,BoxOutline,Name,HealthBar,HealthBarOutline = Drawing.new("Square"),Drawing.new("Square"),Drawing.new("Text"),Drawing.new("Square"),Drawing.new("Square")
+    local Box,BoxOutline,Name,HealthBar,HealthBarOutline,Weapon = Drawing.new("Square"),Drawing.new("Square"),Drawing.new("Text"),Drawing.new("Square"),Drawing.new("Square")
     local Updater = game:GetService("RunService").RenderStepped:Connect(function()
     if Player.Character ~= nil and Player.Character:FindFirstChild("Humanoid") ~= nil and Player.Character:FindFirstChild("HumanoidRootPart") ~= nil and Player.Character.Humanoid.Health > 0 and Player.Character:FindFirstChild("Head") ~= nil then
             local Target2dPosition,IsVisible = workspace.CurrentCamera:WorldToViewportPoint(Player.Character.HumanoidRootPart.Position)
@@ -54,6 +55,21 @@ function CreateEsp(Player)
                 Name.Size = Config.NamesSize
             else
                 Name.Visible = false
+            end
+            if Config.Weapon then
+                Weapon.Visible = IsVisible
+                Weapon.Color = Config.NamesColor
+                for i,Weapons in pairs(game.ReplicatedStorage.Weapons:GetChildren()) do
+                    Weapon.Text = Player.Character[v]
+               end
+               Weapon.Center = true
+               Weapon.Outline = Config.NamesOutline
+               Weapon.OutlineColor = Config.NamesOutlineColor
+               Weapon.Position = Vector2.new(Target2dPosition.X, Target2dPosition.Y - height * 1 + -15)
+               Weapon.Font = Config.NamesFont
+               Weapon.Size = Config.NamesSize
+            else
+            Weapon.Visible = false
             end
             if Config.HealthBar then
                 HealthBarOutline.Visible = IsVisible
