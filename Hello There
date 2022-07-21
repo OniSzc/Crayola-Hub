@@ -117,7 +117,9 @@ function CreateEsp(Player)
                     Weapon.Text = "Executioner's Blade"
                     
                     elseif Player.Character:FindFirstChild("Kusanagi") then
-                        
+                    Weapon.Text = "Kusanagi"
+                    else
+                    Weapon.Text = "Fists"
                 end
             else
             Weapon.Visible = false
